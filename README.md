@@ -18,6 +18,7 @@ Note: The guide may become obsolete based on AWS updgrades.
 7. Open "Windows Powershell" and navigate to the spring boot project directory.
 
 8. Execute following commands in order.
+
   a. Set-AWSCredential ` -AccessKey <AccessKey_from_csv> ` -SecretKey <SecretKey_from_csv> ` -StoreAs <name_your_profile>
   b. Set-AWSCredential -ProfileName <profile_name_given_in_previous_command>
   
