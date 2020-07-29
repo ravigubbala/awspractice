@@ -19,8 +19,9 @@ Note: The guide may become obsolete based on AWS updgrades.
 
 8. Execute following commands in order.
 
-  a. Set-AWSCredential ` -AccessKey <AccessKey_from_csv> ` -SecretKey <SecretKey_from_csv> ` -StoreAs <name_your_profile>
-  b. Set-AWSCredential -ProfileName <profile_name_given_in_previous_command>
+    a. Set-AWSCredential ` -AccessKey <AccessKey_from_csv> ` -SecretKey <SecretKey_from_csv> ` -StoreAs <name_your_profile>
+  
+    b. Set-AWSCredential -ProfileName <profile_name_given_in_previous_command>
   
 9. Go to "Elastic Container Registry" from the AWS Console.
 
