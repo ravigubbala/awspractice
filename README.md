@@ -1,7 +1,7 @@
 Step by step guide for deploying spring boot application on AWS ECS. Date: 29.07.2020
 -------------------------------------------------------------------------------------
 
-Note: The guide may become obsolete with future releases of AWS.
+Note: The guide may become obsolete with the future releases of AWS.
 
 1. Install AWSTools for Windows.
 
