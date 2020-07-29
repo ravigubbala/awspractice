@@ -29,73 +29,79 @@ Note: The guide may become obsolete with the future releases of AWS.
 
 11. Leave default values for all other settings and click "Create Repository".
 
-12. Once repository is created, click on repository name. It will take you to image details. Take a note of the value in "Image URI" column which will be used in later.
+12. Once repository is created, Click on the "View Push commands" bar displayed at the top.
 
-13. Go to IAM > Roles from AWS Console.
+14. Go to "Windows" tab on the popup and execute the given commands in "Windows Powershell" in the given order.
 
-14. Click on "Create Role" and in the next page select "Elastic Container Service" and then select "Elastic Container Service Task" and click "Next: Permissions".
+15. Once the commands are executed successfully, Go to "Elastic Container Registry" from the AWS Console and click on repository name. 
 
-15. In the next page, search and select "AmazonEC2ContainerServiceRole" policy.
+16. It will take you to image details page. Take a note of the value in "Image URI" column which will be used later.
 
-16. Leave default values in all other pages and enter role name of your choice in the last page and click "Create Role".
+17. Go to IAM > Roles from AWS Console.
 
-17. Go to "ECS" from AWS Console and then to the "Task Definitions".
+18. Click on "Create Role" and in the next page select "Elastic Container Service" and then select "Elastic Container Service Task" and click "Next: Permissions".
 
-18. Click on "Create New Task Definition" and in the next page select "Fargate" and click "Next Step".
+19. In the next page, search and select "AmazonEC2ContainerServiceRole" policy.
 
-19. In the next page enter a task definition name of your choice.
+20. Leave default values in all other pages and enter role name of your choice in the last page and click "Create Role".
 
-20. select the role created in step 16 for "Task Role".
+21. Go to "ECS" from AWS Console and then to the "Task Definitions".
 
-21. Select "Task Memory" and "Task CPU" as per the requirement. Eg. 2 GB, 1 vCPU.
+22. Click on "Create New Task Definition" and in the next page select "Fargate" and click "Next Step".
 
-22. Click on "Add Container" and enter container name as per your choice.
+23. In the next page enter a task definition name of your choice.
 
-23. Copy and paste "Image URI" value from step 12.
+24. select the role created in step 20 for "Task Role".
 
-24. Enter port number configured in spring boot application for "Port mappings". For example, port number 8080.
+25. Select "Task Memory" and "Task CPU" as per the requirement. Eg. 2 GB, 1 vCPU.
 
-25. Leave default values for all other inputs and click "Add".
+26. Click on "Add Container" and enter container name as per your choice.
 
-26. Once container is added, click on "Create" to create task definition.
+27. Copy and paste "Image URI" value from step 16.
 
-27. Go to "ECS" > "Amazon ECS" > "Clusters" from the AWS Console.
+28. Enter port number configured in spring boot application for "Port mappings". For example, port number 8080.
 
-28. Click on "Create Cluster" and select "AWS Fargate" as cluster template.
+29. Leave default values for all other inputs and click "Add".
 
-29. Enter cluster name of your choice and select "Create VPC" and click on "Create".
+30. Once container is added, click on "Create" to create task definition.
 
-30. Click on "View Cluster" once the cluster is created.
+31. Go to "ECS" > "Amazon ECS" > "Clusters" from the AWS Console.
 
-31. Go to "Services" tab and click on "create".
+32. Click on "Create Cluster" and select "AWS Fargate" as cluster template.
 
-32. In the next page, select "Fargate" as launch type.
+33. Enter cluster name of your choice and select "Create VPC" and click on "Create".
 
-33. Make sure correct values are selected for "Task Definition" and "Cluster".
+34. Click on "View Cluster" once the cluster is created.
 
-34. Enter service name of your choice and input no of tasks depending on the replication requirements and click on "Next Step".
+35. Go to "Services" tab and click on "create".
 
-35. Make sure to select values for VPC and subnets and select "ENABLED" for "Auto-assign public IP".
+36. In the next page, select "Fargate" as launch type.
 
-36. Leave default values in all other pages and click "Create Service" in last page.
+37. Make sure correct values are selected for "Task Definition" and "Cluster".
 
-37. Once service is created, click on service name to open service definition.
+38. Enter service name of your choice and input no of tasks depending on the replication requirements and click on "Next Step".
 
-38. In the "Details" tab, click on the value of the "Security Groups".
+39. Make sure to select values for VPC and subnets and select "ENABLED" for "Auto-assign public IP".
 
-39. Once your are in the security group details page, Select "Inbound Rules".
+40. Leave default values in all other pages and click "Create Service" in last page.
 
-40. Click on "Edit Inbound Rules" and add new rule with values Type=Custom TCP, Protocol=TCP, Port range=8080, Source=0.0.0.0/0. Note 8080 is same as the port selected in step 24.
+41. Once service is created, click on service name to open service definition.
 
-41. Click on "Save Rules" to save the the inbound rules.
+42. In the "Details" tab, click on the value of the "Security Groups".
 
-42. Go to "ECS" > "Clusters" and click on the name of the cluster created in step 29.
+43. Once your are in the security group details page, Select "Inbound Rules".
 
-43. Go to "Tasks" tab and click on Task id.
+44. Click on "Edit Inbound Rules" and add new rule with values Type=Custom TCP, Protocol=TCP, Port range=8080, Source=0.0.0.0/0. Note 8080 is same as the port selected in step 28.
 
-44. In the Task details page, copy the value of "Public IP".
+45. Click on "Save Rules" to save the the inbound rules.
 
-45. Open web browser and paste the public IP copied in the previous step followed by colon and port number from step 24. Eg. 8080. This should launch your spring boot application.
+46. Go to "ECS" > "Clusters" and click on the name of the cluster created in step 33.
+
+47. Go to "Tasks" tab and click on Task id.
+
+48. In the Task details page, copy the value of "Public IP".
+
+49. Open web browser and paste the public IP copied in the previous step followed by colon and port number from step 28. Eg. 8080. This should launch your spring boot application.
 
 References:
 
