@@ -31,7 +31,7 @@ Note: The guide may become obsolete with the future releases of AWS.
 
 12. Once repository is created, Click on the "View Push commands" bar displayed at the top.
 
-14. Go to "Windows" tab on the popup and execute the given commands in "Windows Powershell" in the given order.
+14. Go to "Windows" tab on the popup and execute the given commands in "Windows Powershell" in the given order. Make sure Docker is running in your system (Eg. Docker Desktop for windows) prior to the execution of the commands.
 
 15. Once the commands are executed successfully, Go to "Elastic Container Registry" from the AWS Console and click on repository name. 
 
