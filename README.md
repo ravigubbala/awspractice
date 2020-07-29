@@ -98,6 +98,8 @@ Note: The guide may become obsolete with the future releases of AWS.
 45. Open web browser and paste the public IP copied in the previous step followed by colon and port number from step 24. Eg. 8080. This should launch your spring boot application.
 
 References:
-    1. https://epsagon.com/development/deploying-java-spring-boot-on-aws-fargate/
-    2. https://stackoverflow.com/questions/38587325/aws-ecr-getauthorizationtoken
-    3. https://github.com/in28minutes/deploy-spring-microservices-to-aws-ecs-fargate
+        1. https://epsagon.com/development/deploying-java-spring-boot-on-aws-fargate/
+    
+        2. https://stackoverflow.com/questions/38587325/aws-ecr-getauthorizationtoken
+    
+        3. https://github.com/in28minutes/deploy-spring-microservices-to-aws-ecs-fargate
