@@ -99,8 +99,8 @@ Note: The guide may become obsolete with the future releases of AWS.
 
 References:
 
-       https://epsagon.com/development/deploying-java-spring-boot-on-aws-fargate
+1. https://epsagon.com/development/deploying-java-spring-boot-on-aws-fargate
     
-       https://stackoverflow.com/questions/38587325/aws-ecr-getauthorizationtoken
+2. https://stackoverflow.com/questions/38587325/aws-ecr-getauthorizationtoken
     
-       https://github.com/in28minutes/deploy-spring-microservices-to-aws-ecs-fargate
+3. https://github.com/in28minutes/deploy-spring-microservices-to-aws-ecs-fargate
