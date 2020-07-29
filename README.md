@@ -29,13 +29,13 @@ Note: The guide may become obsolete based on AWS updgrades.
 
 11. Leave default values for all other settings and click "Create Repository".
 
-12. Once repository is created, click on repository name. It will take you to image details. Take a note of the value in "Image URI" column. which will be used in later.
+12. Once repository is created, click on repository name. It will take you to image details. Take a note of the value in "Image URI" column which will be used in later.
 
-13. Go to IAM > Roles from AWS COnsole.
+13. Go to IAM > Roles from AWS Console.
 
 14. Click on "Create Role" and in the next page select "Elastic Container Service" and then select "Elastic Container Service Task" and click "Next: Permissions".
 
-15. IN the next page, search and select "AmazonEC2ContainerServiceRole" policy.
+15. In the next page, search and select "AmazonEC2ContainerServiceRole" policy.
 
 16. Leave default values in all other pages and enter role name of your choice in the last page and click "Create Role".
 
@@ -61,11 +61,11 @@ Note: The guide may become obsolete based on AWS updgrades.
 
 27. Go to "ECS" > "Amazon ECS" > "Clusters" from the AWS Console.
 
-28. Click on "Create Cluster" and select "AWS Fargate" cluster template.
+28. Click on "Create Cluster" and select "AWS Fargate" as cluster template.
 
 29. Enter cluster name of your choice and select "Create VPC" and click on "Create".
 
-30. Click on "View Cluster" once cluster is created.
+30. Click on "View Cluster" once the cluster is created.
 
 31. Go to "Services" tab and click on "create".
 
@@ -85,7 +85,7 @@ Note: The guide may become obsolete based on AWS updgrades.
 
 39. Once your are in the security group details page, Select "Inbound Rules".
 
-40. Click on "Edit Inbound Rules" and add new rule with values Type=Custom TCP, Protocol=TCP, Port range=8080, Source=0.0.0.0/0
+40. Click on "Edit Inbound Rules" and add new rule with values Type=Custom TCP, Protocol=TCP, Port range=8080, Source=0.0.0.0/0. Note 8080 is same as the port selected in step 24.
 
 41. Click on "Save Rules" to save the the inbound rules.
 
@@ -95,4 +95,4 @@ Note: The guide may become obsolete based on AWS updgrades.
 
 44. In the Task details page, copy the value of "Public IP".
 
-45. Open web browser and paste the public IP copied in the previous step followed by colon and port number from step 24. Eg. 8080. This should open your spring boot application.
+45. Open web browser and paste the public IP copied in the previous step followed by colon and port number from step 24. Eg. 8080. This should launch your spring boot application.
